@@ -1,1 +1,47 @@
-<p>login works!</p>
+<div class="p-6 border border-blue-500 2px roundde-lg mt-6 shadow-lg bg-white">
+    <form [formGroup]="criarNovoUsuarioForm" (ngSubmit)="enviarFormularion()">
+        <label for="name" id="name">Nome de usuário:</label>
+        <input 
+        type="text" 
+        id="name" 
+        formControlName="name" 
+        placeholder="jose_gamer"
+        class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-400"        
+        required>
+
+        <label for="name" id="name">Email:</label>
+        <input 
+        type="text" 
+        id="email" 
+        formControlName="email" 
+        placeholder="jose_gamer@gmail.com"
+        class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-400"        
+        required>
+
+        <label for="name" id="name">Senha:</label>
+        <input 
+        type="text" 
+        id="passwordHash" 
+        formControlName="passwordHash" 
+        placeholder="Sua senha vem aqui"
+        class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-400"        
+        required>
+
+        <label for="name" id="name">Confirme sua senha:</label>
+        <input 
+        type="text" 
+        id="passwordHash"
+        value="confirmarsenha"
+        placeholder="Sua senha vem aqui"
+        class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-400"        
+        required>
+    
+        <button 
+            class="w-full p-2 rounded-lg shadow-lg bg-blue-600 text-white hover:bg-blue-800 hover:font-semibold hover:cursor-pointer"
+            type="submit"
+            label="Criar Usuário"
+        pButton>
+        </button>
+    
+    </form>
+</div>
